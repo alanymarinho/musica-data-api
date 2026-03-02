@@ -19,7 +19,7 @@ public class AlbumsService {
     public Albums create(Albums request){
         Albums albums = new Albums(request.getName(), request.getArtistName(),
                 request.getReleaseDate(), request.getStyleMusic(), request.getRecordLabel());
-        albums.setId(nextId);
+        albums.setId(nextId++);
         albumsList.add(albums);
         return albums;
     }

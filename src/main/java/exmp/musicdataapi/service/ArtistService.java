@@ -38,12 +38,31 @@ public class ArtistService {
     }
 
 
+
+
     //listar artistas cadastrados
     public List<Artist> findAll(){
         return artistList;
     }
 
     //atualizar cadastro de um artista
+    public Artist updateById(Long id, Artist request){
+
+        for(Artist artist : artistList){
+
+            if(artist.getId().equals(id)){
+                artist.setName(request.getName());
+                artist.setInActivity(request.getInActivity());
+                artist.setActivityPeriod(request.getActivityPeriod());
+                artist.setType(request.getType());
+                artist.setStyleMusic(request.getStyleMusic());
+            }
+        }
+
+        return null;
+    }
+
+
 
 
 

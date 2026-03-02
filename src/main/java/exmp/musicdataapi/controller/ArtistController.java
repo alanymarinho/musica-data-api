@@ -39,6 +39,16 @@ public class ArtistController {
         return service.findAll();
     }
 
+    //atualizar cadastro de artista
+    @PutMapping("/{id}")
+    public Artist update(@PathVariable Long id, @RequestBody Artist request){
+        return service.updateById(id,request);
+    }
+
+
+
+
+
     //delete passado o id
     @DeleteMapping("/{id}")
     public Boolean deleteById(@PathVariable Long id){
