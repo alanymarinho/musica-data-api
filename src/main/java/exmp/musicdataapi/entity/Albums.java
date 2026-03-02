@@ -12,9 +12,8 @@ public class Albums {
     private String recordLabel; //gravadora
 
     //construtor
-    public Albums(Long id, String name, String artistName, String releaseDate,
+    public Albums(String name, String artistName, String releaseDate,
                   List<String> styleMusic, String recordLabel){
-        this.id = id;
         this.name = name;
         this.artistName = artistName;
         this.releaseDate = releaseDate;

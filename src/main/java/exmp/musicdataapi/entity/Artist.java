@@ -12,14 +12,15 @@ public class Artist {
     private List<String> styleMusic;
 
     //construtor
-    public Artist(Long id, String name, Boolean inActivity, String activityPeriod,String type, List<String> styleMusic){
-        this.id = id;
+    public Artist(String name, Boolean inActivity, String activityPeriod,String type, List<String> styleMusic){
         this.name = name;
         this.inActivity = inActivity;
         this.activityPeriod = activityPeriod;
         this.type = type;
         this.styleMusic = styleMusic;
     }
+
+    public Artist(){}
 
     //getters and setters
     public Long getId(){
@@ -69,4 +70,7 @@ public class Artist {
     public void setStyleMusic(List<String> styleMusic) {
         this.styleMusic = styleMusic;
     }
+
+
+
 }
